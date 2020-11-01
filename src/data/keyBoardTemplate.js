@@ -2,7 +2,7 @@ import buttons from './buttons';
 import { LANG_SET } from '../assets/constants/lang';
 
 const keyBoardTemplate = () => {
-  const langStore = localStorage.getItem(`${LANG_SET}`);
+  const langStore = sessionStorage.getItem(`${LANG_SET}`);
   const line1 = buttons.filter((el) => el.row === 1);
   const line2 = buttons.filter((el) => el.row === 2);
   const line3 = buttons.filter((el) => el.row === 3);

@@ -3,10 +3,10 @@ import renderTemplate from './renderTemplate';
 import * as T from '../data/index';
 
 const init = () => {
-  const langStore = localStorage.getItem(`${LANG_SET}`);
+  const langStore = sessionStorage.getItem(`${LANG_SET}`);
 
   if (!langStore) {
-    localStorage.setItem(`${LANG_SET}`, 'ru');
+    sessionStorage.setItem(`${LANG_SET}`, 'ru');
   }
 
   renderTemplate(T.textAreaTemplate);
