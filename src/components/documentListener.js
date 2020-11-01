@@ -1,6 +1,6 @@
 import { KEYBOARD, KEYBOARD_ACT } from '../assets/constants/classes';
 
-const bodyListener = () => {
+const documentListener = () => {
   const keyboard = document.querySelector(`.${KEYBOARD}`);
 
   document.addEventListener('click', (e) => {
@@ -15,4 +15,4 @@ const bodyListener = () => {
   });
 };
 
-export default bodyListener;
+export default documentListener;

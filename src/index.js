@@ -1,10 +1,10 @@
 import './style.scss';
 import init from './components/init';
-import bodyListener from './components/bodyListener';
+import documentListener from './components/documentListener';
 import textAreaListener from './components/textAreaListener';
 
 window.onload = () => {
   init();
-  bodyListener();
+  documentListener();
   textAreaListener();
 };
