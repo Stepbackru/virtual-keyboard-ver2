@@ -16,8 +16,8 @@ const keyPress = () => {
 
   document.addEventListener('keydown', (e) => {
     const button = buttons.find((item) => item.code === e.code);
+    e.preventDefault();
     if (button) {
-      e.preventDefault();
       if ((e.code === SHIFT_LEFT_CODE || e.code === SHIFT_RIGHT_CODE)
          && (e.repeat)) {
         return;
@@ -26,7 +26,9 @@ const keyPress = () => {
         return;
       }
       const keyClick = keyboardKeys
-        .find((el) => el.innerText === button.content[`${langStore}`]);
+        .find((el) => el
+          .innerText.toLowerCase() === button
+          .content[`${langStore}`].toLowerCase());
 
       keyClick.classList.add(`${KEYBOARD_KEY_ACT}`);
       keyClick.click();
@@ -35,12 +37,13 @@ const keyPress = () => {
 
   document.addEventListener('keyup', (e) => {
     const button = buttons.find((item) => item.code === e.code);
+    e.preventDefault();
     if (button) {
       const keyClick = keyboardKeys
-        .find((el) => el.innerText === button.content[`${langStore}`]);
+        .find((el) => el
+          .innerText.toLowerCase() === button
+          .content[`${langStore}`].toLowerCase());
 
-      keyClick.classList.add(`${KEYBOARD_KEY_ACT}`);
-      keyClick.click();
       keyClick.classList.remove(`${KEYBOARD_KEY_ACT}`);
     }
   });

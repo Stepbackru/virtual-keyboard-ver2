@@ -29,6 +29,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: -100%;
+  background: #cecece;
+  border-radius: 1rem;
   transition: bottom .4s ease-in;
 
   &__line {
