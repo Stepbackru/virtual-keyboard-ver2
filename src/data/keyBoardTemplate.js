@@ -41,7 +41,7 @@ const keyBoardTemplate = () => {
           child: line2.map((el) => {
             return (
               {
-                el: 'div',
+                el: 'button',
                 classNames: `keyboard__key keyboard__key-${el.width}`,
                 child: [
                   {
@@ -60,7 +60,7 @@ const keyBoardTemplate = () => {
           child: line3.map((el) => {
             return (
               {
-                el: 'div',
+                el: 'button',
                 classNames: `keyboard__key keyboard__key-${el.width}`,
                 child: [
                   {
@@ -79,7 +79,7 @@ const keyBoardTemplate = () => {
           child: line4.map((el) => {
             return (
               {
-                el: 'div',
+                el: 'button',
                 classNames: `keyboard__key keyboard__key-${el.width}`,
                 child: [
                   {
@@ -98,7 +98,7 @@ const keyBoardTemplate = () => {
           child: line5.map((el) => {
             return (
               {
-                el: 'div',
+                el: 'button',
                 classNames: `keyboard__key keyboard__key-${el.width}`,
                 child: [
                   {
