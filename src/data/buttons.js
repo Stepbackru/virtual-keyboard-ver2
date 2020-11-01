@@ -1,3 +1,5 @@
+import langIcon from '../assets/icons/langIcon';
+
 const buttons = [
   {
     type: 'other',
@@ -449,8 +451,8 @@ const buttons = [
   },
   {
     type: 'functional',
-    content: { ru: 'Win', en: 'Win' },
-    altContent: { ru: 'Win', en: 'Win' },
+    content: { ru: `${langIcon}RU`, en: `${langIcon}EN` },
+    altContent: { ru: `${langIcon}RU`, en: `${langIcon}EN` },
     code: 'MetaLeft',
     width: 'normal',
     row: 5,

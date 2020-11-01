@@ -22,7 +22,7 @@ const keyBoardTemplate = () => {
           child: line1.map((el) => {
             return (
               {
-                el: 'div',
+                el: 'button',
                 classNames: `keyboard__key keyboard__key-${el.width}`,
                 child: [
                   {
