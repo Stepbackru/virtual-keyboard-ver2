@@ -6,11 +6,13 @@ import {
 } from '../assets/constants/classes';
 import * as C from '../assets/constants/keys';
 import capsLockHandler from './capsLockHandler';
+import shiftHandler from './shiftHandler';
 
 const writeToTextArea = () => {
   const textarea = document.querySelector(`.${TEXTAREA}`);
   const keyboard = document.querySelector(`.${KEYBOARD}`);
   let capsPress = false;
+  let shiftPress = false;
 
   keyboard.addEventListener('click', (e) => {
     const item = e.target;
@@ -65,7 +67,8 @@ const writeToTextArea = () => {
           capsLockHandler(keysContent, capsPress);
           break;
         case C.SHIFT:
-          // activeShiftButton(keysContent);
+          shiftPress = !shiftPress;
+          shiftHandler(keysContent, shiftPress);
           break;
         case C.CTRL:
           break;

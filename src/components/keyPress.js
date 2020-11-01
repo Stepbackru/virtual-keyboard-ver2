@@ -12,9 +12,9 @@ import { LANG_SET } from '../assets/constants/lang';
 
 const keyPress = () => {
   const langStore = sessionStorage.getItem(`${LANG_SET}`);
-  const keyboardKeys = [...document.querySelectorAll(`.${KEYBOARD_KEY}`)];
 
   document.addEventListener('keydown', (e) => {
+    const keyboardKeys = [...document.querySelectorAll(`.${KEYBOARD_KEY}`)];
     const button = buttons.find((item) => item.code === e.code);
     e.preventDefault();
     if (button) {
@@ -25,24 +25,29 @@ const keyPress = () => {
       if ((e.code === CAPSLOCK_CODE) && (e.repeat)) {
         return;
       }
-      const keyClick = keyboardKeys
-        .find((el) => el
-          .innerText.toLowerCase() === button
-          .content[`${langStore}`].toLowerCase());
 
+      const keyClick = keyboardKeys
+        .find((el) => (el
+          .innerText.toLowerCase() === button
+          .content[`${langStore}`].toLowerCase()) || (el
+          .innerText.toLowerCase() === button
+          .altContent[`${langStore}`].toLowerCase()));
       keyClick.classList.add(`${KEYBOARD_KEY_ACT}`);
       keyClick.click();
     }
   });
 
   document.addEventListener('keyup', (e) => {
+    const keyboardKeys = [...document.querySelectorAll(`.${KEYBOARD_KEY}`)];
     const button = buttons.find((item) => item.code === e.code);
     e.preventDefault();
     if (button) {
       const keyClick = keyboardKeys
-        .find((el) => el
+        .find((el) => (el
           .innerText.toLowerCase() === button
-          .content[`${langStore}`].toLowerCase());
+          .content[`${langStore}`].toLowerCase()) || (el
+          .innerText.toLowerCase() === button
+          .altContent[`${langStore}`].toLowerCase()));
 
       keyClick.classList.remove(`${KEYBOARD_KEY_ACT}`);
     }
