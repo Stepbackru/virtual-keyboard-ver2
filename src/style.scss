@@ -6,10 +6,10 @@ body {
 }
 
 .wrapper {
-  max-width: 1020px;
-  min-height: 50px;
+  max-width: 102rem;
+  min-height: 5rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .textarea {
@@ -21,8 +21,15 @@ body {
 }
 
 .keyboard {
+  max-width: 102rem;
   width: 100%;
   min-height: 5rem;
+  padding: 2rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  transition: bottom .4s ease-in;
 
   &__line {
     display: flex;
@@ -81,4 +88,7 @@ body {
       -moz-box-shadow: .3rem .3rem .4rem .1rem rgba(0,0,0,0.7);
             box-shadow: .3rem .3rem .4rem .1rem rgba(0,0,0,0.7);
   }
+}
+.keyboard-active {
+  bottom: 0;
 }

@@ -16,7 +16,7 @@ const render = (args) => {
   }
 
   if (args.text !== undefined) {
-    element.innerText = `${args.text}`;
+    element.innerHTML = `${args.text}`;
   }
 
   // Childs of element
