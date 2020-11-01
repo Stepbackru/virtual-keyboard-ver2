@@ -54,14 +54,26 @@ body {
        -moz-box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
             box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
     transition: all .3s;
+
+    @media (max-width: 767px) {
+      width: 6rem;
+    }
   }
 
   &__key-medium {
     width: 7rem;
+
+    @media (max-width: 767px) {
+      width: 4rem;
+    }
   }
 
   &__key-wide {
     width: 13.5rem;
+
+    @media (max-width: 767px) {
+      width: 8.5rem;
+    }
   }
 
   &__key-wideplus {
