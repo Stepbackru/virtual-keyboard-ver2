@@ -1,5 +1,6 @@
 import './style.scss';
+import init from './components/init';
 
 window.onload = () => {
-  document.body.innerHTML = `hello world`;
+  init();
 };

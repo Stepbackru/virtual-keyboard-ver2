@@ -14,19 +14,18 @@ const render = (args) => {
   if (args.classNames) {
     element.classList.add(...args.classNames.split(' '));
   }
-  
+
   if (args.text !== undefined) {
     element.innerText = `${args.text}`;
   }
 
   // Childs of element
   if (args.child && Array.isArray(args.child)) {
-    args.child.forEach(child => element.appendChild(render(child)));
+    args.child.forEach((child) => element.appendChild(render(child)));
   }
 
   // Parent of element (for first element)
   if (args.parent) {
-
     if (args.parent === 'body') {
       document.body.appendChild(element);
     } else {
@@ -46,9 +45,9 @@ const render = (args) => {
       } else if (attrValue !== '') {
         element.dataset[attrName] = attrValue;
       }
-    })
+    });
   }
   return element;
-}
+};
 
 export default render;

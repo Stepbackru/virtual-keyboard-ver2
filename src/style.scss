@@ -1,3 +1,67 @@
 @import './assets/css/clear.scss';
 
+.wrapper {
+  max-width: 1020px;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+
+.textarea {
+  width: calc(100% - 10px);
+  height: 30rem;
+  resize: none;
+  margin: 0 .2rem 2rem;
+  font-size: 1.6rem;
+}
+
+.keyboard {
+  width: 100%;
+  min-height: 5rem;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: rgb(69,73,71);
+    background: linear-gradient(180deg, rgba(69,73,71,1) 0%, rgba(1,1,1,1) 100%);
+    margin: .3rem .2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    outline: none;
+    -webkit-box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
+       -moz-box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
+            box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
+    transition: all .3s;
+  }
+
+  &__key-medium {
+    width: 7rem;
+  }
+
+  &__key-wide {
+    width: 13.5rem;
+  }
+
+  &__key-wideplus {
+    width: 16rem;
+  }
+
+  &__key-overwide{
+    width: 39.9rem;
+  }
+
+  .key__content {
+      color: #fff;
+      text-align: center;
+      font-size: 1.6rem;
+  }
+}

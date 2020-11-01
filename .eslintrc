@@ -1,8 +1,8 @@
 {
   "parser": "babel-eslint",
   "env": {
-      "browser": true,
-      "es6": true
+    "browser": true,
+    "es2021": true
   },
   "extends": [
       "airbnb-base"
@@ -12,7 +12,7 @@
       "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-      "ecmaVersion": 2018,
+      "ecmaVersion": 12,
       "sourceType": "module"
   },
   "rules": {
@@ -20,6 +20,7 @@
       "no-use-before-define": ["error", { "functions": false, "variables": false }],
       "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
       "import/extensions": ["error", "ignorePackages", {"js": "never"}],
-      "max-len": ["error", { "code": 80 }]
+      "max-len": ["error", { "code": 80 }],
+      "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }]
   }
 }
