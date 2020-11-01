@@ -97,5 +97,8 @@ body {
   }
 }
 .keyboard-active {
-  bottom: 0;
+  bottom: 1rem;
+  -webkit-box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
+     -moz-box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
+          box-shadow: .3rem .3rem .7rem .3rem rgba(0,0,0,0.7);
 }
