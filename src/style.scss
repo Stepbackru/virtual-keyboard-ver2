@@ -1,4 +1,9 @@
 @import './assets/css/clear.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .wrapper {
   max-width: 1020px;
@@ -6,7 +11,6 @@
   margin: 0 auto;
   padding: 20px;
 }
-
 
 .textarea {
   width: calc(100% - 10px);
@@ -60,8 +64,21 @@
   }
 
   .key__content {
-      color: #fff;
-      text-align: center;
-      font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+  .key__content-shift {
+    text-transform: uppercase;
+  }
+  .keyboard__key-active,
+  .keyboard__key:active {
+    transform: scale(.95);
+    background: rgb(60,134,227);
+    background: linear-gradient(180deg, rgba(60,134,227,1) 0%, rgba(18,85,170,1) 100%);
+    -webkit-box-shadow: .3rem .3rem .4rem .1rem rgba(0,0,0,0.7);
+      -moz-box-shadow: .3rem .3rem .4rem .1rem rgba(0,0,0,0.7);
+            box-shadow: .3rem .3rem .4rem .1rem rgba(0,0,0,0.7);
   }
 }
